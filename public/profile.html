@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Your Profile - Simple Chat</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        height: 100dvh;
+        background: #0f172a;
+        color: #e5e7eb;
+      }
+      header {
+        padding: 0.75rem 1rem;
+        background: #020617;
+        border-bottom: 1px solid #1f2937;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 1rem;
+      }
+      header a {
+        font-size: 0.85rem;
+        color: #e5e7eb;
+        text-decoration: none;
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+        border: 1px solid #1f2937;
+        background: #020617;
+      }
+      header a:hover {
+        border-color: #38bdf8;
+        color: #38bdf8;
+      }
+      main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        box-sizing: border-box;
+      }
+      #profile-card {
+        width: 100%;
+        max-width: 380px;
+        padding: 1rem 1.25rem 1.25rem;
+        border-radius: 0.5rem;
+        background: #020617;
+        border: 1px solid #1f2937;
+        box-sizing: border-box;
+      }
+      #profile-card h2 {
+        margin: 0 0 0.75rem;
+        font-size: 1rem;
+      }
+      .profile-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        margin-bottom: 0.25rem;
+      }
+      .profile-row .label {
+        color: #9ca3af;
+      }
+      .profile-rooms {
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+      }
+      .profile-rooms h3 {
+        margin: 0 0 0.5rem;
+        font-size: 0.9rem;
+      }
+      #profile-rooms-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 0.85rem;
+      }
+      #profile-rooms-list li {
+        padding: 0.15rem 0;
+      }
+      #error {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        color: #fca5a5;
+        min-height: 1em;
+      }
+      @media (max-width: 640px) {
+        header {
+          padding: 0.6rem 0.75rem;
+        }
+        main {
+          padding: 0.75rem 0.75rem 0.9rem;
+        }
+        #profile-card {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Your Profile</h1>
+      <a href="/">Back to chat</a>
+    </header>
+    <main>
+      <div id="profile-card">
+        <h2>Account</h2>
+        <div class="profile-row">
+          <span class="label">Username</span>
+          <span id="profile-username"></span>
+        </div>
+        <div class="profile-row">
+          <span class="label">User ID</span>
+          <span id="profile-user-id"></span>
+        </div>
+        <div class="profile-row">
+          <span class="label">Created</span>
+          <span id="profile-created"></span>
+        </div>
+        <div class="profile-rooms">
+          <h3>Your rooms</h3>
+          <ul id="profile-rooms-list"></ul>
+        </div>
+        <div id="error"></div>
+      </div>
+    </main>
+    <script src="profile.js"></script>
+  </body>
+</html>
